@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu</class>
+ <widget class="QMainWindow" name="menu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Estilo general para la Barra de Menú */
+QMenuBar {
+    background-color: #1e1e24;
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid #2d2d34;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #2b2b36;
+    color: #29b6f6; /* Azul brillante al pasar el cursor */
+}
+
+QMenuBar::item:pressed {
+    background-color: #333344;
+}
+
+/* Estilo para los Menús Desplegables (menuestructuras, menulineales) */
+QMenu {
+    background-color: #1e1e24;
+    color: #ffffff;
+    border: 1px solid #2d2d34;
+    padding: 5px 0px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 13px;
+}
+
+QMenu::item {
+    padding: 6px 25px 6px 20px; /* Espacio para texto y posibles iconos */
+    border: 1px solid transparent;
+}
+
+/* Cuando pasas el mouse por encima de una opción (ej. actionlista_enlazada) */
+QMenu::item:selected {
+    background-color: #29b6f6;
+    color: #101014; /* Texto oscuro para contrastar con el fondo azul */
+    border-radius: 2px;
+}
+
+/* Estilo para los Separadores (separator) */
+QMenu::separator {
+    height: 1px;
+    background-color: #44444c;
+    margin: 5px 10px;
+}
+
+/* Estilo para la barra de estado por si la usas */
+QStatusBar {
+    background-color: #1e1e24;
+    color: #888888;
+    border-top: 1px solid #2d2d34;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuestructuras">
+    <property name="title">
+     <string>estructuras</string>
+    </property>
+    <widget class="QMenu" name="menulineales">
+     <property name="title">
+      <string>lineales </string>
+     </property>
+     <addaction name="actionlista_enlazada"/>
+    </widget>
+    <addaction name="menulineales"/>
+    <addaction name="separator"/>
+    <addaction name="actionsalir"/>
+   </widget>
+   <addaction name="menuestructuras"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionsalir">
+   <property name="text">
+    <string>salir</string>
+   </property>
+  </action>
+  <action name="actionlista_enlazada">
+   <property name="text">
+    <string>lista enlazada</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

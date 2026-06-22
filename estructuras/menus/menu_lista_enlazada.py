@@ -9,7 +9,9 @@ class menu_lista_enlazada(object):
         print("2. Insertar al final")
         print("3. Buscar elemento")
         print("4. mostrar lista")
-        print("5. Salir")
+        print("5. Eliminar elemento del inicio")
+        print("6. Eliminar elemento del final")
+        print("7. Salir")
     
     def ejecutar_opcion(self, opcion):
         if opcion == "1":
@@ -30,6 +32,10 @@ class menu_lista_enlazada(object):
         elif opcion == "4":
             self.lista.print_linked_list()
         elif opcion == "5":
+            self.lista.delete_at_beginning()
+        elif opcion == "6":
+            self.lista.delete_at_end()
+        elif opcion == "7":
             self.salir()
         else:
             print("Opción no válida.")
@@ -39,12 +45,12 @@ class menu_lista_enlazada(object):
             self.mostrar_menu()
             try:
                 opcion = input("Seleccione una opción: ")
-                if opcion == "5":
+                if opcion == "7":
                     self.ejecutar_opcion(opcion)
                     break
                 self.ejecutar_opcion(opcion)
             except ValueError:
-                print("Opción no válida. Por favor, ingrese un número del 1 al 5.")
+                print("Opción no válida. Por favor, ingrese un número del 1 al 7.")
     
     def eliminar_final(self):
         # Lógica para eliminar el último elemento de la lista enlazada
@@ -62,6 +68,15 @@ class menu_lista_enlazada(object):
             print(f"El dato {dato} se encuentra en la lista.")
         else:
             print(f"El dato {dato} no se encuentra en la lista.")
-    
+            
+    def eliminar_inicio(self):
+        # Lógica para eliminar el primer elemento de la lista enlazada
+        if self.lista.head:
+            dato = self.lista.head.dato
+            self.lista.delete_at_beginning()
+            print(f"El dato {dato} ha sido eliminado de la lista.")
+        else:
+            print("La lista está vacía.")
+
     def salir(self):
         print("Saliendo del programa.")

@@ -51,3 +51,31 @@ class LinkedList:
             else:
                 temp = temp.next
         return False
+    
+    def delete_from_end(self):
+        #si la lista esta vacia, no
+        if self.head is None and self.tail is None:
+            print("La lista está vacía. No se puede eliminar ningún elemento.")
+            return
+        #si la lista tiene un solo nodo, eliminarlo y actualizar cabeza y cola a None
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+            return
+        
+    def delete_at_beginning(self):
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+            
+            
+    def delete_at_end(self):
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            temp = self.head
+            while temp.next != self.tail:
+                temp = temp.next
+            temp.next = None
+            self.tail = temp
