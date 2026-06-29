@@ -191,13 +191,30 @@ QScrollBar::handle:vertical:hover {
    </property>
    <widget class="QMenu" name="menumenu_principal">
     <property name="title">
-     <string>menu principal</string>
+     <string>MENUS</string>
     </property>
-    <addaction name="actioninsertar_al_inicio"/>
-    <addaction name="actioninsertar_al_final"/>
-    <addaction name="actionbuscar"/>
-    <addaction name="actionimprimir"/>
-    <addaction name="actionsalir"/>
+    <widget class="QMenu" name="menumenu_principal_2">
+     <property name="title">
+      <string>menu principal</string>
+     </property>
+     <addaction name="actioninsertar_al_inicio_2"/>
+     <addaction name="actioninsertar_al_final_2"/>
+     <addaction name="actionbuscar_2"/>
+     <addaction name="actionimprimir_2"/>
+     <addaction name="actionsalir_2"/>
+    </widget>
+    <widget class="QMenu" name="menupila">
+     <property name="title">
+      <string>pila</string>
+     </property>
+     <addaction name="actionpush"/>
+     <addaction name="actionpop"/>
+     <addaction name="actiontop_of_stack"/>
+     <addaction name="actionregresar"/>
+    </widget>
+    <addaction name="menumenu_principal_2"/>
+    <addaction name="menupila"/>
+    <addaction name="actionsalir_3"/>
    </widget>
    <addaction name="menumenu_principal"/>
   </widget>
@@ -205,11 +222,6 @@ QScrollBar::handle:vertical:hover {
   <action name="actioninsertar_al_inicio">
    <property name="text">
     <string>insertar al inicio</string>
-   </property>
-  </action>
-  <action name="actioninsertar_al_final">
-   <property name="text">
-    <string>insertar al final</string>
    </property>
   </action>
   <action name="actionbuscar">
@@ -225,6 +237,56 @@ QScrollBar::handle:vertical:hover {
   <action name="actionsalir">
    <property name="text">
     <string>salir</string>
+   </property>
+  </action>
+  <action name="actioninsertar_al_inicio_2">
+   <property name="text">
+    <string>insertar al inicio</string>
+   </property>
+  </action>
+  <action name="actioninsertar_al_final_2">
+   <property name="text">
+    <string>insertar al final</string>
+   </property>
+  </action>
+  <action name="actionbuscar_2">
+   <property name="text">
+    <string>buscar</string>
+   </property>
+  </action>
+  <action name="actionimprimir_2">
+   <property name="text">
+    <string>imprimir </string>
+   </property>
+  </action>
+  <action name="actionsalir_2">
+   <property name="text">
+    <string>salir</string>
+   </property>
+  </action>
+  <action name="actionsalir_3">
+   <property name="text">
+    <string>Stack</string>
+   </property>
+  </action>
+  <action name="actionpush">
+   <property name="text">
+    <string>push</string>
+   </property>
+  </action>
+  <action name="actionpop">
+   <property name="text">
+    <string>pop</string>
+   </property>
+  </action>
+  <action name="actiontop_of_stack">
+   <property name="text">
+    <string>top of stack</string>
+   </property>
+  </action>
+  <action name="actionregresar">
+   <property name="text">
+    <string>regresar</string>
    </property>
   </action>
  </widget>
